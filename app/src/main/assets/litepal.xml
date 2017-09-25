@@ -1,0 +1,12 @@
+<litepal>
+
+    <dbname value="cool_weather"/>
+
+    <version value="1"/>
+
+    <list>
+        <mapping class="com.example.xieke.coolweather.database.Province" />
+        <mapping class="com.example.xieke.coolweather.database.City" />
+        <mapping class="com.example.xieke.coolweather.database.County" />
+    </list>
+</litepal>
