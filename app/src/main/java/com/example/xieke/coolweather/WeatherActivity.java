@@ -1,5 +1,6 @@
 package com.example.xieke.coolweather;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
@@ -24,6 +25,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.model.StringLoader;
 import com.example.xieke.coolweather.gson.Forecast;
 import com.example.xieke.coolweather.gson.Weather;
+import com.example.xieke.coolweather.service.AutoUpdateService;
 import com.example.xieke.coolweather.util.HttpUtil;
 import com.example.xieke.coolweather.util.Utility;
 
@@ -233,5 +235,7 @@ public class WeatherActivity extends AppCompatActivity {
         carWashText.setText(carWash);
         sportText.setText(sport);
         weatherLayout.setVisibility(View.VISIBLE);
+        Intent intent = new Intent(this, AutoUpdateService.class);
+        startService(intent);
     }
 }
